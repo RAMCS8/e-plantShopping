@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
@@ -14,9 +15,9 @@ const CartItem = ({ onContinueShopping }) => {
     cart.forEach(item => {
       total += parseFloat(item.cost.substring(1)) * item.quantity;
 
-      return total;
-
     });
+
+    return total;
   };
 
   const handleContinueShopping = (e) => {
